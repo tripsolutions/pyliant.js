@@ -100,7 +100,7 @@ exports.pyliantEncode = function(o) {
     return object_xform(o)
 }
 
-exports.formatQuery = function(query) {
+function formatQuery(query) {
     let formattedQuery = ''
     if (query) {
       if (typeof query === 'string') return query
@@ -124,6 +124,7 @@ exports.formatQuery = function(query) {
           }
         })
       }
-     }
+    }
     return formattedQuery.substr(0, formattedQuery.length - 1)
-  }
+}
+exports.formatQuery = formatQuery
