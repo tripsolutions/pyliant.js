@@ -1,4 +1,4 @@
-exports.pyliant_decode = function(o) {
+exports.pyliantDecode = function(o) {
     var id_map = {}
     var incomplete_refs = {}
     function object_xform(o) {
@@ -58,7 +58,7 @@ exports.pyliant_decode = function(o) {
     return object_xform(o)
 }
 
-exports.pyliant_encode = function(o) {
+exports.pyliantEncode = function(o) {
     var id_set = new WeakSet()
     var id_map = new WeakMap()
     var current = 1
@@ -124,6 +124,6 @@ exports.formatQuery = function(query) {
           }
         })
       }
-    }
+     }
     return formattedQuery.substr(0, formattedQuery.length - 1)
   }
